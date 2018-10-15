@@ -15,7 +15,8 @@ def logistic_regression(alpha=0.01, num_iters=400):
 
     X = map_feature(X[:, 0], X[:, 1])  # 映射为多项式
     col = X.shape[1]
-    theta = np.zeros((col, 1))
+    # theta = np.zeros((col, 1))
+    theta = np.random.randn(col, 1)
 
     theta, J_history = gradient_descent(X, y, theta, alpha, num_iters)
 
